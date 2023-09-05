@@ -24,6 +24,7 @@ namespace HyperSol.Games.SpaceGame
         {
             foreach (var item in _asset.positionSequence[0].position)
             {
+                transform.position = _asset.positionSequence[0].defaultSpawn;
                 beginSeq = DOTween.Sequence();
                 beginSeq.Append(transform.DOMove(item, time/0.9f))
                     .SetEase(Ease.Linear);
